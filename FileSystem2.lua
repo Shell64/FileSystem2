@@ -3,7 +3,7 @@
 	
 	http://playgunlock.com
 	
-	This code (FileSystem2 for Gunlock) is licensed under the MIT Open Source License.
+	This code (FileSystem2 for Gunigine) is licensed under the MIT Open Source License.
 	
 	The MIT License (MIT)
 
@@ -119,7 +119,7 @@ function FileSystem2.Load(Path)
 	end
 end
 
-function FileSystem2.NewFile(Path, Mode)
+function FileSystem2.NewFileMode(Path, Mode)
 	return IO.Open(Path, Mode)
 end
 
@@ -146,7 +146,7 @@ end
 
 function FileSystem2.Write(Path, Data)
 	local File, Err = IO.Open(Path, "w")
-		
+	
 	if not File then
 		return nil, Err
 	end
